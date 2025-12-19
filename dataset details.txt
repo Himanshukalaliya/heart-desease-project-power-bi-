@@ -1,0 +1,47 @@
+🔍 Overview
+Goal: Predict whether a patient has heart disease based on clinical and diagnostic attributes.
+
+Type: Tabular data, used for binary classification.
+
+Target Variable: target (0 = no heart disease, 1 = presence of heart disease)
+
+📊 Features (Columns)
+Column Name	Description
+age	Age of the patient (in years)
+sex	Sex of the patient (1 = male, 0 = female)
+cp	Chest pain type (0–3):
+- 0: typical angina
+- 1: atypical angina
+- 2: non-anginal pain
+- 3: asymptomatic
+trestbps	Resting blood pressure (in mm Hg)
+chol	Serum cholesterol (in mg/dl)
+fbs	Fasting blood sugar > 120 mg/dl (1 = true, 0 = false)
+restecg	Resting electrocardiographic results:
+- 0: normal
+- 1: ST-T wave abnormality
+- 2: left ventricular hypertrophy
+thalach	Maximum heart rate achieved
+exang	Exercise-induced angina (1 = yes, 0 = no)
+oldpeak	ST depression induced by exercise relative to rest
+slope	Slope of the peak exercise ST segment:
+- 0: upsloping
+- 1: flat
+- 2: downsloping
+ca	Number of major vessels (0–3) colored by fluoroscopy
+thal	Thalassemia (1 = normal; 2 = fixed defect; 3 = reversible defect)
+target	Presence of heart disease (1 = yes, 0 = no)
+
+📌 Notes
+Originally, the dataset had 76 attributes, but this subset (from the Cleveland database) uses only 14 commonly studied features.
+
+This dataset is clean, though some versions contain missing values represented by ? (especially in ca and thal).
+
+target was originally a multi-class variable (0–4), but is often binarized for classification tasks.
+
+✅ Use Cases
+Classification models: Logistic Regression, Random Forest, SVM, XGBoost, etc.
+
+Feature engineering: One-hot encoding categorical variables like cp, thal, slope
+
+Model evaluation: Accuracy, ROC-AUC, Confusion Matrix
